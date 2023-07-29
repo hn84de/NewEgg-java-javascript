@@ -1,5 +1,7 @@
+var b = [];
 for(let i = 0; i<a.length; i++){
     b[i] = [];
+    try{
     for(let j = 0; j<a[i].tableData.Items.length; j++){
         b[i][j] = [];
         b[i][j][0] = a[i].tableData.Items[j].FinalPrice;
@@ -69,4 +71,5 @@ for(let i = 0; i<a.length; i++){
             }
         }
     }
+    }catch(error){let ty = 0;}
 }
