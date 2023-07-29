@@ -1,0 +1,72 @@
+for(let i = 0; i<a.length; i++){
+    b[i] = [];
+    for(let j = 0; j<a[i].tableData.Items.length; j++){
+        b[i][j] = [];
+        b[i][j][0] = a[i].tableData.Items[j].FinalPrice;
+        for(let z = 0; z<a[i].tableData.Items[j].Properties.length; z++){
+            b[i][j][z+1] = "Unknown";
+        }
+        for(let k = 0; k<a[i].tableData.Items[j].Properties.length; k++){
+            switch (a[i].tableData.Items[j].Properties[k].PropertyCode){
+
+                case 3942:
+                    b[i][j][1] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 35120:
+                    b[i][j][2] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 2923:
+                    b[i][j][3] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 410:
+                    b[i][j][4] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 34568:
+                    b[i][j][5] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 449:
+                    b[i][j][6] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 402:
+                    b[i][j][7] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 445:
+                    b[i][j][8] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 400:
+                    b[i][j][9] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 443:
+                    b[i][j][10] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 441:
+                    b[i][j][11] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 41506:
+                    b[i][j][12] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 399:
+                    b[i][j][13] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 398:
+                    b[i][j][14] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 394:
+                    b[i][j][15] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 393:
+                    b[i][j][16] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 37494:
+                    b[i][j][17] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                case 37493:
+                    b[i][j][18] = a[i].tableData.Items[j].Properties[k].Description;
+                    break;
+                default:
+                    break;
+                
+            }
+        }
+    }
+}
